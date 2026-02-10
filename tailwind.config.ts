@@ -13,6 +13,7 @@ const config: Config = {
         surface: "#ffffff",
         text: "#707070",
         muted: "rgba(217, 217, 217, 1)",
+        mutedText: "#1d1d1d",
         border: "#1d1d1d",
         accent: "#1d1d1d",
         accentHover: "#1d1d1d33",
@@ -28,8 +29,9 @@ const config: Config = {
       },
       fontSize: {
         "heading-xl": ["64px", { lineHeight: "64px", letterSpacing: "-0.03em" }],
-        "heading-l": ["48px", { lineHeight: "1", letterSpacing: "-0.03em" }],
+        "heading-l": ["64px", { lineHeight: "1", letterSpacing: "-0.03em" }],
         "heading-s": ["32px", { lineHeight: "1", letterSpacing: "-0.03em" }],
+        "heading-m": ["44px", { lineHeight: "1", letterSpacing: "-0.03em" }],
         "heading-xs": ["16px", { lineHeight: "1", letterSpacing: "-0.03em" }],
         "body-m": ["16px", { lineHeight: "1", letterSpacing: "0" }],
         "body-s": ["12px", { lineHeight: "1", letterSpacing: "0" }],

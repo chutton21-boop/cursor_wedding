@@ -13,7 +13,7 @@ type NavProps = { activeLabel?: string };
 
 export default function Nav({ activeLabel = "Schedule" }: NavProps) {
   return (
-    <nav className="border-t border-border bg-bg px-6 py-6" aria-label="Main">
+    <nav className="sticky top-0 z-10 border-t border-border bg-bg px-6 py-6" aria-label="Main">
       <ul className="flex flex-wrap justify-center gap-3">
         {ITEMS.map(({ href, label }) => {
           const isActive = label === activeLabel;

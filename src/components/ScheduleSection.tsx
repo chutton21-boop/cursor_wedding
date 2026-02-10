@@ -38,10 +38,10 @@ const EVENTS: Event[] = [
 function EventCard({ dateTime, title, description, location }: Event) {
   return (
     <article className="flex flex-col gap-4 border-b border-border py-8 first:pt-0 last:border-b-0">
-      <p className="font-body text-body-s text-muted">{dateTime}</p>
-      <h3 className="font-heading text-heading-xs text-text">{title}</h3>
+      <p className="font-body text-body-s text-mutedText">{dateTime}</p>
+      <h2 className="font-heading text-heading-s text-text">{title}</h2>
       <p className="font-body text-body-s text-text">{description}</p>
-      <p className="font-body text-body-s text-muted">{location}</p>
+      <p className="font-body text-body-s text-mutedText">{location}</p>
       <div className="flex flex-wrap gap-3">
         <Link
           href="#"
@@ -63,8 +63,8 @@ function EventCard({ dateTime, title, description, location }: Event) {
 export default function ScheduleSection() {
   return (
     <section id="schedule" className="border-t border-border bg-bg px-6 py-12">
-      <div className="mx-auto max-w-3xl">
-        <h2 className="font-heading text-heading-s text-text mb-10">
+      <div className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+        <h2 className="font-heading text-heading-m text-text md:mb-0">
           Here&apos;s the general plan for the weekend
         </h2>
         <div className="flex flex-col">
