@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 // Unsplash: a-black-and-white-photo-of-a-city-street-I2p-QDcGyic
@@ -9,13 +8,10 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden bg-text px-6 py-16">
       <div className="absolute inset-0 z-0">
-        <Image
+        <img
           src={HERO_IMAGE}
           alt=""
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
+          className="h-full w-full object-cover object-center"
         />
       </div>
       <div className="relative z-10 flex flex-col items-center gap-6 text-center">
