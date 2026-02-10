@@ -31,6 +31,11 @@ jobs:
 
       - name: Build static export
         run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: List export output
+        run: ls -la out/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
