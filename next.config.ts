@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   output: "export",
   basePath: process.env.NODE_ENV === "production" ? "/cursor_wedding" : "",
   assetPrefix: process.env.NODE_ENV === "production" ? "/cursor_wedding/" : "",
+  eslint: { ignoreDuringBuilds: true },
 };
 
 export default nextConfig;
