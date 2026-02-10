@@ -6,7 +6,7 @@ export default function TokensPage() {
       <div className="mx-auto max-w-3xl px-6 py-12">
         <Link
           href="/"
-          className="text-body-s text-muted hover:text-text mb-8 inline-block"
+          className="text-body-s text-mutedText hover:text-text mb-8 inline-block"
         >
           ← Back
         </Link>
@@ -19,31 +19,31 @@ export default function TokensPage() {
           <div className="flex flex-wrap gap-4">
             <div className="flex flex-col items-center gap-2">
               <div className="h-16 w-24 rounded border border-border bg-bg" />
-              <span className="text-body-s text-muted">bg</span>
+              <span className="text-body-s text-mutedText">bg</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-16 w-24 rounded border border-border bg-surface" />
-              <span className="text-body-s text-muted">surface</span>
+              <span className="text-body-s text-mutedText">surface</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-16 w-24 rounded bg-text" />
-              <span className="text-body-s text-muted">text</span>
+              <span className="text-body-s text-mutedText">text</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-16 w-24 rounded bg-muted" />
-              <span className="text-body-s text-muted">muted</span>
+              <span className="text-body-s text-mutedText">muted</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-16 w-24 rounded border-2 border-border" />
-              <span className="text-body-s text-muted">border</span>
+              <span className="text-body-s text-mutedText">border</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-16 w-24 rounded bg-accent" />
-              <span className="text-body-s text-muted">accent</span>
+              <span className="text-body-s text-mutedText">accent</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-16 w-24 rounded bg-accentHover" />
-              <span className="text-body-s text-muted">accentHover</span>
+              <span className="text-body-s text-mutedText">accentHover</span>
             </div>
           </div>
         </section>
@@ -56,31 +56,31 @@ export default function TokensPage() {
               <p className="font-heading text-heading-xl text-text">
                 Heading XL
               </p>
-              <p className="text-body-s text-muted mt-1">64px · Cormorant Upright</p>
+              <p className="text-body-s text-mutedText mt-1">64px · Cormorant Upright</p>
             </div>
             <div>
               <p className="font-heading text-heading-l text-text">Heading L</p>
-              <p className="text-body-s text-muted mt-1">48px · Cormorant Upright</p>
+              <p className="text-body-s text-mutedText mt-1">64px · Cormorant Upright</p>
             </div>
             <div>
               <p className="font-heading text-heading-s text-text">Heading S</p>
-              <p className="text-body-s text-muted mt-1">32px · Cormorant Upright</p>
+              <p className="text-body-s text-mutedText mt-1">32px · Cormorant Upright</p>
             </div>
             <div>
               <p className="font-heading text-heading-xs text-text">Heading XS</p>
-              <p className="text-body-s text-muted mt-1">16px · Cormorant Upright</p>
+              <p className="text-body-s text-mutedText mt-1">16px · Cormorant Upright</p>
             </div>
             <div>
               <p className="text-body-m text-text">
                 Body M — The quick brown fox jumps over the lazy dog.
               </p>
-              <p className="text-body-s text-muted mt-1">16px · DM Sans</p>
+              <p className="text-body-s text-mutedText mt-1">16px · DM Sans</p>
             </div>
             <div>
-              <p className="text-body-s text-muted">
+              <p className="text-body-s text-mutedText">
                 Body S — The quick brown fox jumps over the lazy dog.
               </p>
-              <p className="text-body-s text-muted mt-1">12px · DM Sans</p>
+              <p className="text-body-s text-mutedText mt-1">12px · DM Sans</p>
             </div>
           </div>
         </section>
@@ -118,7 +118,7 @@ export default function TokensPage() {
               <h3 className="font-heading text-heading-xs text-text mb-2">
                 Card title
               </h3>
-              <p className="text-body-s text-muted">
+              <p className="text-body-s text-mutedText">
                 Surface background, border token. No shadow in design system.
               </p>
             </div>
@@ -126,7 +126,7 @@ export default function TokensPage() {
               <h3 className="font-heading text-heading-xs text-text mb-2">
                 Card on bg
               </h3>
-              <p className="text-body-s text-muted">
+              <p className="text-body-s text-mutedText">
                 Same border, bg background for contrast.
               </p>
             </div>
@@ -137,13 +137,13 @@ export default function TokensPage() {
         <section className="mb-16">
           <h2 className="font-heading text-heading-s mb-6">Borders</h2>
           <div className="space-y-4">
-            <div className="border border-border rounded p-4 text-body-s text-muted">
+            <div className="border border-border rounded p-4 text-body-s text-mutedText">
               border (1px)
             </div>
-            <div className="border-2 border-border rounded p-4 text-body-s text-muted">
+            <div className="border-2 border-border rounded p-4 text-body-s text-mutedText">
               border-2
             </div>
-            <div className="border-t border-border pt-4 text-body-s text-muted">
+            <div className="border-t border-border pt-4 text-body-s text-mutedText">
               border-t (divider)
             </div>
           </div>
@@ -152,7 +152,7 @@ export default function TokensPage() {
         {/* Shadows */}
         <section>
           <h2 className="font-heading text-heading-s mb-6">Shadows</h2>
-          <p className="text-body-m text-muted">
+          <p className="text-body-m text-mutedText">
             No shadow token in Figma variables. Cards above use border only.
           </p>
         </section>
