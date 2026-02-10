@@ -6,7 +6,7 @@ const HERO_IMAGE =
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden bg-text px-6 py-16">
+    <section className="relative flex min-h-[80vh] flex-col items-start justify-center overflow-hidden bg-text px-6 py-16">
       <div className="absolute inset-0 z-0">
         <img
           src={HERO_IMAGE}
@@ -14,7 +14,11 @@ export default function Hero() {
           className="h-full w-full object-cover object-center"
         />
       </div>
-      <div className="relative z-10 flex flex-col items-center gap-6 text-center">
+      <div
+        className="absolute inset-0 z-[1] bg-black/20"
+        aria-hidden
+      />
+      <div className="relative z-10 flex max-w-[566px] flex-col items-start gap-3 text-left">
         <h1 className="font-heading text-heading-l max-w-2xl text-bg">
           Chloe Hutton & Greg Wilson are about to get married!
         </h1>
