@@ -106,10 +106,10 @@ export default function WhatToDoSection() {
   return (
     <section
       id="what-to-do"
-      className="border-t border-border bg-bg px-6 py-12"
+      className="border-t border-border bg-bg px-8 py-12"
       aria-labelledby="what-to-do-heading"
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-[960px]">
         <div className="flex flex-col items-center gap-4">
           <h2
             id="what-to-do-heading"
