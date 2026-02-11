@@ -36,13 +36,23 @@ export default function WhatToDoSection() {
       aria-labelledby="what-to-do-heading"
     >
       <div className="mx-auto max-w-5xl">
-        <h2
-          id="what-to-do-heading"
-          className="font-heading text-heading-s text-black"
-        >
-          While you&apos;re here, try our favorite places
-        </h2>
-        <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-2">
+        <div className="flex flex-col items-center gap-4">
+          <h2
+            id="what-to-do-heading"
+            className="font-heading text-heading-s text-black text-center"
+          >
+            While you&apos;re here, try our favorite places
+          </h2>
+          <a
+            href={GOOGLE_MAPS_LIST_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block w-fit rounded-full border border-border bg-surface px-5 py-2.5 font-body text-body-s text-mutedText hover:bg-muted"
+          >
+            View all places on Google Maps
+          </a>
+        </div>
+        <div className="mt-10">
           <ul className="flex flex-col gap-4" aria-label="Favorite places list">
             {PLACES.map((place) => (
               <li key={place.id}>
@@ -65,21 +75,6 @@ export default function WhatToDoSection() {
               </li>
             ))}
           </ul>
-          <div className="flex min-h-[400px] flex-col gap-4">
-            <iframe
-              src={GOOGLE_MAPS_LIST_URL}
-              title="View our favorite places on Google Maps"
-              className="min-h-[400px] w-full rounded-lg border border-border"
-            />
-            <a
-              href={GOOGLE_MAPS_LIST_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-fit rounded-full border border-border bg-surface px-5 py-2.5 font-body text-body-s text-mutedText hover:bg-muted"
-            >
-              View all places on Google Maps
-            </a>
-          </div>
         </div>
       </div>
     </section>
