@@ -26,7 +26,7 @@ export default function Hero() {
         <p className="font-body text-body-m text-bg">Sat. Oct 10, 2026</p>
         <Link
           href="/rsvp"
-          className="mt-2 rounded-full border-2 border-white bg-transparent px-8 py-3 font-body text-body-m text-white hover:bg-white/10"
+          className="mt-2 rounded-full border border-white bg-transparent px-8 py-3 font-body text-body-m text-white hover:bg-white/10"
         >
           RSVP
         </Link>
