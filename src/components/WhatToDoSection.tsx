@@ -30,6 +30,76 @@ const PLACES: {
     googleMapsUrl: GOOGLE_MAPS_LIST_URL,
     imageUrl: "https://picsum.photos/seed/place3/200/200",
   },
+  {
+    id: "4",
+    name: "Sunset Bar",
+    description: "Cocktail bar",
+    googleMapsUrl: GOOGLE_MAPS_LIST_URL,
+    imageUrl: "https://picsum.photos/seed/place4/200/200",
+  },
+  {
+    id: "5",
+    name: "Green Garden Cafe",
+    description: "Cafe",
+    googleMapsUrl: GOOGLE_MAPS_LIST_URL,
+    imageUrl: "https://picsum.photos/seed/place5/200/200",
+  },
+  {
+    id: "6",
+    name: "Harbor Seafood",
+    description: "Seafood restaurant",
+    googleMapsUrl: GOOGLE_MAPS_LIST_URL,
+    imageUrl: "https://picsum.photos/seed/place6/200/200",
+  },
+  {
+    id: "7",
+    name: "Morning Bakery",
+    description: "Bakery",
+    googleMapsUrl: GOOGLE_MAPS_LIST_URL,
+    imageUrl: "https://picsum.photos/seed/place7/200/200",
+  },
+  {
+    id: "8",
+    name: "Park View Diner",
+    description: "Diner",
+    googleMapsUrl: GOOGLE_MAPS_LIST_URL,
+    imageUrl: "https://picsum.photos/seed/place8/200/200",
+  },
+  {
+    id: "9",
+    name: "Downtown Pizza",
+    description: "Pizza restaurant",
+    googleMapsUrl: GOOGLE_MAPS_LIST_URL,
+    imageUrl: "https://picsum.photos/seed/place9/200/200",
+  },
+  {
+    id: "10",
+    name: "Riverside Tavern",
+    description: "Pub",
+    googleMapsUrl: GOOGLE_MAPS_LIST_URL,
+    imageUrl: "https://picsum.photos/seed/place10/200/200",
+  },
+  {
+    id: "11",
+    name: "The Corner Bistro",
+    description: "Bistro",
+    googleMapsUrl: GOOGLE_MAPS_LIST_URL,
+    imageUrl: "https://picsum.photos/seed/place11/200/200",
+  },
+  {
+    id: "12",
+    name: "Luna Wine Bar",
+    description: "Wine bar",
+    googleMapsUrl: GOOGLE_MAPS_LIST_URL,
+    imageUrl: "https://picsum.photos/seed/place12/200/200",
+  },
+  {
+    id: "13",
+    name: "Maple Brunch Spot",
+    description: "Brunch",
+    googleMapsUrl: GOOGLE_MAPS_LIST_URL,
+    imageUrl: "https://picsum.photos/seed/place13/200/200",
+  },
 ];
 
 export default function WhatToDoSection() {
@@ -57,7 +127,7 @@ export default function WhatToDoSection() {
           </a>
         </div>
         <div className="mt-10">
-          <ul className="flex flex-col gap-4" aria-label="Favorite places list">
+          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2" aria-label="Favorite places list">
             {PLACES.map((place) => (
               <li key={place.id}>
                 <article className="flex flex-row items-center gap-4 overflow-hidden rounded-[12px] border border-border bg-surface p-4">
