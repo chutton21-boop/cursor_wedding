@@ -43,7 +43,7 @@ export default function FaqSection() {
         <h2 className="font-heading text-heading-s text-black md:mb-0">
           FAQ
         </h2>
-        <div className="flex flex-col divide-y divide-border">
+        <div className="flex flex-col divide-y divide-[rgba(219,219,219,1)]">
           {FAQ_ITEMS.map(({ question, answer }) => (
             <div key={question} className="flex flex-col gap-2 py-6 first:pt-0 last:pb-0">
               <h3 className="font-heading text-heading-s text-black">
