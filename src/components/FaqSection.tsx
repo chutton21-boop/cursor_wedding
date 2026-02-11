@@ -46,7 +46,7 @@ export default function FaqSection() {
               <h3 className="font-heading text-heading-s text-black">
                 {question}
               </h3>
-              <p className="font-body text-body-s text-text">{answer}</p>
+              <p className="font-body text-base leading-[22px] text-black">{answer}</p>
             </div>
           ))}
         </div>
