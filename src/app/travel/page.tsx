@@ -9,9 +9,11 @@ export default function TravelPage() {
       <Nav activeLabel="Travel" />
       <section className="border-t border-border bg-bg px-8 py-12">
         <div className="mx-auto max-w-[960px]">
-          <p className="font-body text-base leading-[22px] text-text">
+          <p className="text-center font-body text-base leading-[22px] text-text">
             We&apos;re working on gathering some recommendations for our
-            out-of-towner guests. Stay tuned!
+            out-of-towner guests.
+            <br />
+            Stay tuned!
           </p>
         </div>
       </section>
