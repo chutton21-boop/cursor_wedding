@@ -14,6 +14,8 @@ const EVENTS: Event[] = [
     title: "Welcome drinks",
     description: "There will be a few light bites and drinks to kick off the weekend.",
     location: "Brokenland",
+    directionsHref:
+      "https://www.google.com/maps/place/Broken+Land/@40.7295225,-73.9577526,17z/data=!3m1!4b1!4m6!3m5!1s0x89c259404bff7eaf:0x42b7be6e0fe29b08!8m2!3d40.7295225!4d-73.9577526!16s%2Fg%2F1t_khfx9?entry=ttu",
   },
   {
     dateTime: "Sat Oct 10 · 4:00pm",
@@ -35,7 +37,7 @@ const EVENTS: Event[] = [
   },
 ];
 
-function EventCard({ dateTime, title, description, location }: Event) {
+function EventCard({ dateTime, title, description, location, directionsHref }: Event) {
   return (
     <article className="flex flex-col gap-4 border-b border-border py-8 first:pt-0 last:border-b-0">
       <p className="font-body text-body-s text-mutedText">{dateTime}</p>
@@ -44,7 +46,9 @@ function EventCard({ dateTime, title, description, location }: Event) {
       <p className="font-body text-body-s text-mutedText">{location}</p>
       <div className="flex flex-wrap gap-3">
         <Link
-          href="#"
+          href={directionsHref ?? "#"}
+          target={directionsHref ? "_blank" : undefined}
+          rel={directionsHref ? "noopener noreferrer" : undefined}
           className="rounded-full border border-border bg-transparent px-4 py-2 font-body text-body-s text-mutedText hover:bg-muted"
         >
           Get directions
