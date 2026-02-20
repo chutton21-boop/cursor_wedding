@@ -66,7 +66,7 @@ function EventCard({ dateTime, title, description, location, directionsHref }: E
 
 export default function ScheduleSection() {
   return (
-    <section id="schedule" className="bg-bg px-8 py-12">
+    <section id="schedule" className="scroll-mt-28 bg-bg px-8 py-12">
       <div className="mx-auto grid max-w-[960px] grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
         <h2 className="sticky top-24 z-[9] self-start bg-bg pb-4 font-heading text-heading-s text-black md:mb-0">
           Here&apos;s the general plan for the weekend

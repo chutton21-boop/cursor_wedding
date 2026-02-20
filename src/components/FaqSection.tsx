@@ -38,7 +38,7 @@ const FAQ_ITEMS: { question: string; answer: string }[] = [
 
 export default function FaqSection() {
   return (
-    <section id="faq" className="border-t border-border bg-bg px-8 py-12">
+    <section id="faq" className="scroll-mt-28 border-t border-border bg-bg px-8 py-12">
       <div className="mx-auto max-w-[960px]">
         <div className="flex flex-col divide-y divide-[rgba(219,219,219,1)]">
           {FAQ_ITEMS.map(({ question, answer }) => (

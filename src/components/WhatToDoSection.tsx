@@ -106,7 +106,7 @@ export default function WhatToDoSection() {
   return (
     <section
       id="what-to-do"
-      className="border-t border-border bg-bg px-8 py-12"
+      className="scroll-mt-28 border-t border-border bg-bg px-8 py-12"
       aria-labelledby="what-to-do-heading"
     >
       <div className="mx-auto max-w-[960px]">
