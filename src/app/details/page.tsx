@@ -1,7 +1,28 @@
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
-import { Fragment } from "react";
+
+const MONTHS: Record<string, number> = {
+  jan: 0, january: 0, feb: 1, february: 1, mar: 2, march: 2, apr: 3, april: 3,
+  may: 4, jun: 5, june: 5, jul: 6, july: 6, aug: 7, august: 7, sep: 8, sept: 8,
+  september: 8, oct: 9, october: 9, nov: 10, november: 10, dec: 11, december: 11,
+};
+
+/** Parse timeline date string to months since year 0 (for spacing math). */
+function parseTimelineDate(dateStr: string): number {
+  const s = dateStr.trim().toLowerCase();
+  const yearMatch = s.match(/(?:^|\s)(20\d{2})\b/);
+  const year = yearMatch ? parseInt(yearMatch[1], 10) : new Date().getFullYear();
+  for (const [name, month] of Object.entries(MONTHS)) {
+    if (s.startsWith(name) || s.includes(" " + name + " ")) {
+      return year * 12 + month;
+    }
+  }
+  return year * 12;
+}
+
+const PX_PER_MONTH = 5;
+const MIN_GAP_PX = 24;
 
 const TIMELINE: { date: string; description: string }[] = [
   { date: "July 2018", description: "Greg and Chloe match on Tinder" },
@@ -53,7 +74,7 @@ export default function DetailsPage() {
       <Nav activeLabel="Love story" />
       <section
         id="love-story"
-        className="border-t border-border bg-bg px-8 py-12"
+        className="scroll-mt-28 border-t border-border bg-bg px-8 py-12"
       >
         <div className="mx-auto max-w-[960px]">
           <h2 className="text-center font-heading text-heading-s text-black">
@@ -64,17 +85,32 @@ export default function DetailsPage() {
               className="absolute left-1/2 top-0 bottom-0 w-px -translate-x-px bg-border"
               aria-hidden
             />
-            <div className="mx-auto grid max-w-2xl grid-cols-2 gap-y-10">
-              {TIMELINE.map(({ date, description }, i) => (
-                <Fragment key={i}>
-                  <p className="pr-8 text-right font-body text-body-m font-semibold text-mutedText">
-                    {date}
-                  </p>
-                  <p className="pl-8 text-left font-body text-body-m text-text">
-                    {description}
-                  </p>
-                </Fragment>
-              ))}
+            <div className="mx-auto flex max-w-2xl flex-col">
+              {TIMELINE.map(({ date, description }, i) => {
+                const monthsToNext =
+                  i < TIMELINE.length - 1
+                    ? parseTimelineDate(TIMELINE[i + 1].date) -
+                      parseTimelineDate(date)
+                    : 0;
+                const gapPx = Math.max(
+                  MIN_GAP_PX,
+                  Math.round(monthsToNext * PX_PER_MONTH)
+                );
+                return (
+                  <div
+                    key={i}
+                    className="grid grid-cols-2 gap-x-4"
+                    style={{ marginBottom: i < TIMELINE.length - 1 ? gapPx : 0 }}
+                  >
+                    <p className="pr-8 text-right font-body text-body-m text-[#1d1d1d]">
+                      {date}
+                    </p>
+                    <p className="pl-8 text-left font-body text-body-m text-[#1d1d1d]">
+                      {description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
